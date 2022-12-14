@@ -6,7 +6,8 @@ import SwiftUI
 struct VkCupMobileQualApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CategoriesView()
+                .preferredColorScheme(.dark)
         }
     }
 }
