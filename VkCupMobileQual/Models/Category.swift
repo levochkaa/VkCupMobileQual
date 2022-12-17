@@ -4,34 +4,34 @@ import Foundation
 
 struct Category {
     let name: String
-    var chosen: Bool
+    var chosen: Bool = false
 }
 
-// sample data
-var sampleData: [Category] = [
-    Category(name: "Юмор", chosen: false),
-    Category(name: "Еда", chosen: false),
-    Category(name: "Кино", chosen: false),
-    Category(name: "Рестораны", chosen: false),
-    Category(name: "Прогулки", chosen: false),
-    Category(name: "Политика", chosen: false),
-    Category(name: "Новости", chosen: false),
-    Category(name: "Автомобили", chosen: false),
-    Category(name: "Сериалы", chosen: false),
-    Category(name: "Рецепты", chosen: false),
-    Category(name: "Работа", chosen: false),
-    Category(name: "Отдых", chosen: false),
-    Category(name: "Спорт", chosen: false),
-    Category(name: "Политика", chosen: false),
-    Category(name: "Новости", chosen: false),
-    Category(name: "Юмор", chosen: false),
-    Category(name: "Еда", chosen: false),
-    Category(name: "Кино", chosen: false),
-    Category(name: "Рестораны", chosen: false),
-    Category(name: "Прогулки", chosen: false),
-    Category(name: "Политика", chosen: false),
-    Category(name: "Новости", chosen: false),
-    Category(name: "Юмор", chosen: false),
-    Category(name: "Еда", chosen: false),
-    Category(name: "Кино", chosen: false),
+// data in Figma is very strange..
+var sampleCategories: [Category] = [
+    Category(name: "Юмор"),
+    Category(name: "Еда"),
+    Category(name: "Кино"),
+    Category(name: "Рестораны"),
+    Category(name: "Прогулки"),
+    Category(name: "Политика"),
+    Category(name: "Новости"),
+    Category(name: "Автомобили"),
+    Category(name: "Сериалы"),
+    Category(name: "Рецепты"),
+    Category(name: "Работа"),
+    Category(name: "Отдых"),
+    Category(name: "Спорт"),
+    Category(name: "Политика"),
+    Category(name: "Новости"),
+    Category(name: "Юмор"),
+    Category(name: "Еда"),
+    Category(name: "Кино"),
+    Category(name: "Рестораны"),
+    Category(name: "Прогулки"),
+    Category(name: "Политика"),
+    Category(name: "Новости"),
+    Category(name: "Юмор"),
+    Category(name: "Еда"),
+    Category(name: "Кино"),
 ]

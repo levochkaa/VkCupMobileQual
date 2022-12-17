@@ -3,6 +3,8 @@
 import SwiftUI
 
 extension Color {
+    // can be placed in Assets
+    // i suppose, these colors are used across the app
     static let headerText = Color(red: 1, green: 1, blue: 1, opacity: 0.48)
     static let headerButtonBackground = Color(red: 1, green: 1, blue: 1, opacity: 0.12)
     static let categoryBackgroundNotChosen = Color(red: 1, green: 1, blue: 1, opacity: 0.17)

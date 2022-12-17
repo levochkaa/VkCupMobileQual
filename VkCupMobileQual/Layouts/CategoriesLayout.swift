@@ -1,14 +1,12 @@
 // CategoriesLayout.swift
 
 import SwiftUI
-import os.log
 
 struct CategoriesLayout: Layout {
     
     let size: CGSize = UIScreen.main.bounds.size
     let spacing: CGFloat = 8
-    
-    let logger = Logger(subsystem: "VK", category: "VK")
+    let padding: CGFloat = 16
     
     func sizeThatFits(proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) -> CGSize {
         let subviewSizes = subviews.map { proxy in
@@ -19,7 +17,7 @@ struct CategoriesLayout: Layout {
         var y: CGFloat = 0
         
         for subviewSize in subviewSizes {
-            if x > size.width - (horizontalPadding * 2) - subviewSize.width {
+            if x > size.width - (padding * 2) - subviewSize.width {
                 x = 0
                 y += subviewSize.height + spacing
             }

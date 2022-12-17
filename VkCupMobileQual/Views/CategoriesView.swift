@@ -1,16 +1,10 @@
 // CategoriesView.swift
 
 import SwiftUI
-import Combine
-
-import os.log
-let logger = Logger(subsystem: "VK", category: "VK")
-
-let horizontalPadding: CGFloat = 16
 
 struct CategoriesView: View {
     
-    @State var categories = sampleData
+    @State var categories = sampleCategories
     
     var body: some View {
         ScrollView(showsIndicators: false) {
@@ -26,7 +20,7 @@ struct CategoriesView: View {
         .safeAreaInset(edge: .bottom) {
             footer
         }
-        .padding(.horizontal, horizontalPadding)
+        .padding(.horizontal)
     }
     
     @ViewBuilder var availableCategories: some View {
@@ -123,13 +117,7 @@ struct CategoriesView: View {
     @ViewBuilder var footer: some View {
         if categories.contains(where: { $0.chosen }) {
             Button {
-                let userChosenCategories = categories.compactMap {
-                    if $0.chosen {
-                        return $0
-                    }
-                    return nil
-                }
-                // continue with `userChosenCategories`
+                // continue with chosen categories
             } label: {
                 Text("Продолжить")
                     .font(.system(size: 18, weight: .medium))
@@ -141,12 +129,5 @@ struct CategoriesView: View {
             }
             .transition(.move(edge: .bottom).combined(with: .opacity))
         }
-    }
-}
-
-struct CategoriesView_Previews: PreviewProvider {
-    static var previews: some View {
-        CategoriesView()
-            .preferredColorScheme(.dark)
     }
 }
